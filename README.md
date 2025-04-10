@@ -1,2 +1,31 @@
-# netflix-sql-analysis
-This project performs basic data exploration on the Netflix Titles Dataset using MySQL. The goal is to analyze and understand the types of content available on Netflix, including movies and TV shows, release trends, and geographical distribution. SQL queries are used to filter, group, and summarize the data to gain meaningful insights.
+# 📊 Netflix Titles SQL Analysis
+
+This project performs an exploratory data analysis (EDA) on Netflix titles using MySQL Workbench.
+
+## 📁 Dataset
+
+- `netflix_titles.csv` from Kaggle: [Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+
+## 🛠️ Tools Used
+
+- MySQL Workbench 8.0 CE
+- SQL Queries
+- Windows OS
+
+## 🔍 SQL Tasks Performed
+
+- View total data
+- Count movies vs TV shows
+- Find shows from specific countries (like India)
+- Filter by release year
+- Search by keywords
+- Group data by year or type
+
+## 🧾 Sample Queries
+
+```sql
+-- Count of Movies vs TV Shows
+SELECT type, COUNT(*) FROM netflix_titles GROUP BY type;
+
+-- Titles from India
+SELECT title, country FROM netflix_titles WHERE country LIKE '%India%';
